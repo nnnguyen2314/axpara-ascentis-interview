@@ -56,8 +56,8 @@ const findMaxNumOfEnvelopes2 = (envelopes) => {
  * @return {number[][]} sortedEnvelopes
  */
 const sortingEnvelopes = (envelopes) => {
-    return envelopes.sort((en1, en2) => {
-        return en1[wi] === en2[wi] ? en2[hi] - en1[hi] : en1[wi] - en2[wi]
+    return envelopes.sort(([w1, h1], [w2, h2]) => {
+        return w1 === w2 ? h2 - h1 : w1 - w2;
     });
 };
 
